@@ -1,24 +1,37 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users テーブル
 
-Things you may want to cover:
+| Column                | Type    | Options                  |
+| --------------------- | ------- | ------------------------ |
+| nickname              | string  | null: false              |
+| email                 | string  | null: false, unique: true|
+| encrypted_password    | string  | null: false              |
 
-* Ruby version
+- has_many :shoes
+- has_many :comments
 
-* System dependencies
+# shoes テーブル
 
-* Configuration
+| Column          | Type      | Options                        |
+| --------------- | --------- | ------------------------------ |
+| manufacturer_id | integer   | null: false                    |
+| color_id        | integer   | null: false                    |
+| stage_id        | integer   | null: false                    |
+| title           | string    | null: false                    |
+| explanation     | text      | null: false                    |
+| user            | reference | null: false, foreign_key: true |
 
-* Database creation
+- belongs_to :user
+- has_many :comments
 
-* Database initialization
+# comments テーブル
 
-* How to run the test suite
+| Column          | Type      | Options                        |
+| --------------- | --------- | ------------------------------ |
+| comment         | text      | null: false                    |
+| user            | reference | null: false, foreign_key: true |
+| shoe            | reference | null: false, foreign_key: true |
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- belongs_to :user
+- belongs_to :shoe

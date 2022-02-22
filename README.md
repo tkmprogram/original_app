@@ -17,7 +17,7 @@
 | --------------- | --------- | ------------------------------ |
 | manufacturer_id | integer   | null: false                    |
 | color_id        | integer   | null: false                    |
-| stage_id        | integer   | null: false                    |
+| inout_id        | integer   | null: false                    |
 | title           | string    | null: false                    |
 | explanation     | text      | null: false                    |
 | user            | reference | null: false, foreign_key: true |

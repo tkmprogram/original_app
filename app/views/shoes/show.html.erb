@@ -18,11 +18,13 @@
     <div class="shoe-inout">
       <%= @shoe.inout.name %>
     </div>
-    <%= link_to "投稿者 #{@shoe.user.nickname}", root_path, class: "shoe-user"%>
+    <div class="shoe-user">
+      <%= link_to "投稿者 #{@shoe.user.nickname}", root_path %>
+    </div>
     <% if user_signed_in? && current_user.id == @shoe.user_id %>
       <div class="shoe-manage">
-        <%= link_to "編集", root_path %>
-        <%= link_to "削除", root_path %>
+        <a href="/" class="btn btn-show"><span>編集</span></a>
+        <a href="/" class="btn btn-show"><span>削除</span></a>
       </div>
     <% end %>
   </div>

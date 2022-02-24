@@ -83,7 +83,7 @@ button.btn {
 .header {
   display: flex;
   height: 70px;
-  background-color: #f18d00;
+  background-color: #6d4845;
 }
 
 .nav {
@@ -93,7 +93,6 @@ button.btn {
 
 .nav__left {
   font-size: 30px;
-  margin: 10px;
   width: calc(100vw - 30%);
   text-align: center;
 }
@@ -103,14 +102,15 @@ a.btn-flat {
 
   padding: 1.5rem 6rem;
 
-  color: #000;
+  color: #edeaec;
   border-radius: 0;
-  background: #feebbe;
+  background: #6d4845;
 }
 
 a.btn-flat span {
   position: relative;
   z-index: 1;
+  font-size: 25px;
 }
 
 a.btn-flat:before {
@@ -127,7 +127,7 @@ a.btn-flat:before {
   -webkit-transform: rotate(45deg) translateX(0) translateY(0);
   transform: rotate(45deg) translateX(0) translateY(0);
 
-  background: #bc6e2e;
+  background: #ac291d;
 }
 
 a.btn-flat:after {
@@ -144,7 +144,7 @@ a.btn-flat:after {
   -webkit-transform: rotate(45deg) translateX(0) translateY(0);
   transform: rotate(45deg) translateX(0) translateY(0);
 
-  background: #bc6e2e;
+  background: #ac291d;
 }
 
 a.btn-flat:hover:before {
@@ -155,6 +155,10 @@ a.btn-flat:hover:before {
 a.btn-flat:hover:after {
   -webkit-transform: rotate(45deg) translateX(0) translateY(50%);
   transform: rotate(45deg) translateX(0) translateY(50%);
+}
+
+a.btn-flat:hover {
+  color: #ffffff;
 }
 
 
@@ -168,12 +172,11 @@ a.btn-flat:hover:after {
 
 .btn-flat4 {
   overflow: hidden;
-
   padding: 1.5rem 6rem;
 
   color: #fff;
   border-radius: 0;
-  background: #feebbe;
+  background: #edeaec;
 }
 
 .btn-flat4 span {
@@ -195,7 +198,7 @@ a.btn-flat:hover:after {
   -webkit-transform: translateX(0) translateY(0);
   transform: translateX(0) translateY(0);
 
-  background: #f18d00;
+  background: #6d4845;
 }
 
 .btn-flat4:after {
@@ -212,7 +215,7 @@ a.btn-flat:hover:after {
   -webkit-transform: translateX(0) translateY(0);
   transform: translateX(0) translateY(0);
 
-  background: #f18d00;
+  background: #6d4845;
 }
 
 .btn-flat4:hover:before {
@@ -225,12 +228,12 @@ a.btn-flat:hover:after {
   transform: translateX(-50%) translateY(0);
 }
 
-/*main top page*/
+/*main*/
 
 .main{
   display: flex;
-  height: calc(100vh - 70px);
-  background-color: #e2d2c4;
+  min-height: 100vh;
+  background-color: #e8d6ae;
   min-width: 100vw;
 }
 
@@ -265,9 +268,108 @@ a.btn-flat:hover:after {
   text-decoration: underline;
 }
 
+.shoe-wrapper {
+  width: calc(100vw - 30%);
+  height: calc(100vh - 20%);
+  margin: 70px auto;
+}
+
+.shoe-hedding {
+  text-align: center;
+  font-size: 50px;
+}
+
+.shoe-image {
+  text-align: center;
+}
+
+.shoe-explanation {
+  font-size: 15px;
+  width: calc(100vw - 70%);
+  height: 300px;
+  margin: 10px auto;
+  border: 2px solid #006f5f;
+  padding: 15px;
+}
+
+.shoe-maker {
+  text-align: center;
+  font-size: 20px;
+}
+
+.shoe-color {
+  text-align: center;
+  font-size: 20px;
+}
+
+.shoe-inout{
+  text-align: center;
+  font-size: 20px;
+}
+
+.shoe-user {
+  font-size: 25px;
+  text-align: center;
+}
+
+.shoe-manage {
+  text-align: center;
+}
+
+a.btn-show {
+  overflow: hidden;
+
+  padding: 1.5rem 6rem;
+
+  color: #4d3614;
+  border-radius: 0;
+  background: #b69b63;
+}
+
+a.btn-show span {
+  position: relative;
+}
+
+a.btn-show:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100px;
+  height: 100px;
+
+  content: '';
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  -webkit-transform: translateX(-80%) translateY(-25px);
+  transform: translateX(-80%) translateY(-25px);
+
+  border-radius: 50%;
+  background: #00426d;
+}
+
+a.btn-show:hover:before {
+  width: 400px;
+  height: 400px;
+
+  -webkit-transform: translateX(-1%) translateY(-175px);
+
+  transform: translateX(-1%) translateY(-175px);
+}
+
+a.btn-show:hover {
+  color: #edeaec;
+}
+
+
 /*フォーム*/
 
 .page-heading {
+  font-size: 50px;
+  text-align: center;
+}
+
+.login {
   font-size: 50px;
   text-align: center;
 }
@@ -300,11 +402,8 @@ a.btn-flat:hover:after {
 }
 
 .form-btn{
-  overflow: hidden;
-  padding: 1.5rem 6rem;
-  color: #fff;
-  border-radius: 0;
-  background: #000;
+  color: #edeaec;
+  background: #ac291d;
 }
 
 

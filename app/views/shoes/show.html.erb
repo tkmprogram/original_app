@@ -1,0 +1,31 @@
+<main class=main>
+  <div class="shoe-wrapper">
+    <p class="shoe-hedding">
+      <%= @shoe.title %>
+    </p>
+    <div class="shoe-image">
+      <%= image_tag @shoe.image %>
+    </div>
+    <div class="shoe-explanation">
+      <%= @shoe.explanation %>
+    </div>
+    <div class="shoe-maker">
+      <%= @shoe.manufacturer.name %>
+    </div>
+    <div class="shoe-color">
+      <%= @shoe.color.name %>
+    </div>
+    <div class="shoe-inout">
+      <%= @shoe.inout.name %>
+    </div>
+    <div class="shoe-user">
+      <%= link_to "投稿者 #{@shoe.user.nickname}", root_path %>
+    </div>
+    <% if user_signed_in? && current_user.id == @shoe.user_id %>
+      <div class="shoe-manage">
+        <a href="/" class="btn btn-show"><span>編集</span></a>
+        <a href="/" class="btn btn-show"><span>削除</span></a>
+      </div>
+    <% end %>
+  </div>
+</main>

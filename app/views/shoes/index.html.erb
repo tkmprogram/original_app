@@ -1,7 +1,19 @@
 <main class="main">
-  <div class="inner">
-    <div class="card__wrapper">
-    a
-    </div>
+  <div class="card__wrapper">
+    <% @shoes.each do |shoe| %>
+      <div class="card">
+        <div class="card__image">
+          <%= link_to image_tag(shoe.image.variant(resize: '300x300')), root_path %>
+        </div>
+        <div class="card__body">
+          <div class="card__title">
+            <%= link_to shoe.title, root_path %>
+          </div>
+          <div class="card__user">
+            <%= link_to "by #{shoe.user.nickname}", root_path %>
+          </div>
+        </div>
+      </div>
+    <% end %>
   </div>
 </main>

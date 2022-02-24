@@ -71,6 +71,9 @@ button.btn {
   border-radius: 0.5rem;
 }
 
+/*header*/
+
+
 .container{
   display: flex;
   flex-direction: column;
@@ -80,7 +83,7 @@ button.btn {
 .header {
   display: flex;
   height: 70px;
-  background-color: #93e213;
+  background-color: #f18d00;
 }
 
 .nav {
@@ -100,9 +103,9 @@ a.btn-flat {
 
   padding: 1.5rem 6rem;
 
-  color: rgb(255, 255, 255);
+  color: #000;
   border-radius: 0;
-  background: #000;
+  background: #feebbe;
 }
 
 a.btn-flat span {
@@ -124,7 +127,7 @@ a.btn-flat:before {
   -webkit-transform: rotate(45deg) translateX(0) translateY(0);
   transform: rotate(45deg) translateX(0) translateY(0);
 
-  background: #fff100;
+  background: #bc6e2e;
 }
 
 a.btn-flat:after {
@@ -141,7 +144,7 @@ a.btn-flat:after {
   -webkit-transform: rotate(45deg) translateX(0) translateY(0);
   transform: rotate(45deg) translateX(0) translateY(0);
 
-  background: #fff100;
+  background: #bc6e2e;
 }
 
 a.btn-flat:hover:before {
@@ -154,9 +157,7 @@ a.btn-flat:hover:after {
   transform: rotate(45deg) translateX(0) translateY(50%);
 }
 
-a.btn-flat:hover{
-  color: #000;
-}
+
 
 .nav__right {
   text-align: right;
@@ -165,17 +166,171 @@ a.btn-flat:hover{
   text-align: center;
 }
 
+.btn-flat4 {
+  overflow: hidden;
+
+  padding: 1.5rem 6rem;
+
+  color: #fff;
+  border-radius: 0;
+  background: #feebbe;
+}
+
+.btn-flat4 span {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-flat4:before {
+  position: absolute;
+  top: 0;
+  left: calc(-100% + 10px);
+
+  width: 100%;
+  height: 100%;
+
+  content: '';
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  -webkit-transform: translateX(0) translateY(0);
+  transform: translateX(0) translateY(0);
+
+  background: #f18d00;
+}
+
+.btn-flat4:after {
+  position: absolute;
+  top: 0;
+  right: calc(-100% + 10px);
+
+  width: 100%;
+  height: 100%;
+
+  content: '';
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  -webkit-transform: translateX(0) translateY(0);
+  transform: translateX(0) translateY(0);
+
+  background: #f18d00;
+}
+
+.btn-flat4:hover:before {
+  -webkit-transform: translateX(50%) translateY(0);
+  transform: translateX(50%) translateY(0);
+}
+
+.btn-flat4:hover:after {
+  -webkit-transform: translateX(-50%) translateY(0);
+  transform: translateX(-50%) translateY(0);
+}
+
+/*main top page*/
+
 .main{
   display: flex;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 70px);
   background-color: #e2d2c4;
+  min-width: 100vw;
+}
+
+.card__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 30px;
+  min-height: calc(100vh - 161px);
+}
+
+.card {
+  width: calc((100% - 50px) / 5);
+  margin-bottom: 40px;
+}
+.card__img {
+  margin-bottom: 16px;
+}
+.card__title {
+  display: block;
+  font-size: 30px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.card__user {
+  display: block;
+  font-size: 20px;
+  color: #999;
+  text-align: right;
+  text-decoration: underline;
+}
+
+/*フォーム*/
+
+.page-heading {
+  font-size: 50px;
+  text-align: center;
+}
+
+.form__wrapper{
+  min-height: calc(100vh - 161px);
+  margin: auto;
+  width: 800px;
+}
+
+.shoes-box {
+  text-align: center;
+}
+
+.form__text {
+  width: 800px;
+  height: 50px;
+}
+
+.field{
+  margin: 10px 0;
+  width: 800px;
+  height: 100px;
+  font-size: 30px;
+}
+
+.actions{
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.form-btn{
+  overflow: hidden;
+  padding: 1.5rem 6rem;
+  color: #fff;
+  border-radius: 0;
+  background: #000;
+}
+
+
+input[type="text"] {
+  width: 500px;
+  height: 30px;
+}
+
+input[type="email"] {
+  width: 500px;
+  height: 30px;
+}
+
+input[type="password"] {
+  width: 500px;
+  height: 30px;
 }
 
 
 
-.footer {
-  margin-top: auto;
+textarea {
+  width: 500px;
+  height: 100px;
+}
+
+select {
+  width: 500px;
   height: 30px;
-  background-color: #9e9e9e;
-  text-align: center;
 }

@@ -1,15 +1,30 @@
 <div class="main">
-  <div class="inner">
-    <%= form_with model: @shoe, url:shoes_path, local: true do |f| %>
-      <h2 class="page-heading">NEW shoes</h2>
-      <div class="shoes-box">
-      <%= f.text_field :title, class:"title", placeholder:"タイトル" %>
-      <%= f.text_area :explanation, class:"explanation", placeholder:"テキスト" %>
-      <%= f.file_field :image, id:"item-image" %>
-      <%= f.collection_select(:manufacturer_id, Manufacturer.all, :id, :name, {}, {class:"manufacturer-select"}) %>
-      <%= f.collection_select(:color_id, Color.all, :id, :name, {}, {class:"color-select"}) %>
-      <%= f.collection_select(:inout_id, Inout.all, :id, :name, {}, {class:"inout-select"}) %>
-      <%= f.submit "投稿する" ,class:"btn" %>
-    <% end %>
+  <div class="form__wrapper">
+    <h2 class="page-heading">NEW shoes</h2>
+      <%= form_with model: @shoe, url:shoes_path, local: true do |f| %>
+        <div class="shoes-box">
+          <div class="field">
+            <%= f.text_field :title, class:"title", placeholder:"タイトル" %>
+          </div>
+          <div class="field">
+            <%= f.text_area :explanation, class:"explanation", placeholder:"テキスト" %>
+          </div>
+          <div class="field">
+            <%= f.file_field :image, id:"item-image" %>
+          </div>
+          <div class="field">
+            <%= f.collection_select(:manufacturer_id, Manufacturer.all, :id, :name, {}, {class:"manufacturer-select"}) %>
+          </div>
+          <div class="field">
+            <%= f.collection_select(:color_id, Color.all, :id, :name, {}, {class:"color-select"}) %>
+          </div>
+          <div class="field">
+            <%= f.collection_select(:inout_id, Inout.all, :id, :name, {}, {class:"inout-select"}) %>
+          </div>
+          <div class="actions">
+            <%= f.submit "投稿する" ,class:"btn form-btn" %>
+          </div>
+        </div>
+      <% end %>
   </div>
 </div>

@@ -1,0 +1,29 @@
+<main class="main">
+  <div class="search">
+    <div class="search-1">
+      <%= form_with(url: search_shoes_path, local: true, method: :get, class: "search-form") do |form| %>
+        <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
+        <%= form.submit "検索", class: "search-btn" %>
+      <% end %>
+    </div>
+  </div>
+  <div class="card__wrapper">
+      <% @shoes.each do |shoe| %>
+        <div class="card">
+          <div class="card-wrapper">
+            <div class="card__image">
+              <%= link_to image_tag(shoe.image.variant(resize: '300x300')), shoe_path(shoe.id) %>
+            </div>
+          </div>
+          <div class="card__body">
+            <div class="card__title">
+              <%= link_to shoe.title, shoe_path(shoe.id) %>
+            </div>
+            <div class="card__user">
+              <%= link_to "by #{shoe.user.nickname}", root_path %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+  </div>
+</main>

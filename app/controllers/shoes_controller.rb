@@ -48,6 +48,10 @@ class ShoesController < ApplicationController
     end
   end
 
+  def search
+    @shoes = Shoe.search(params[:keyword])
+  end
+
   private
 
   def shoe_params

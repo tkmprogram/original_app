@@ -240,13 +240,29 @@ a.btn-flat:hover {
   min-width: 100vw;
 }
 
+.search {
+  width: calc(100vw - 75%);
+  margin: 10px;
+  text-align: center;
+}
+
+.search-1 {
+  margin: 5px;
+}
+
+.search-input {
+  width: 80%;
+  height: 30px;
+}
+
 .card__wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
-  margin: 30px;
   min-height: calc(100vh - 161px);
+  width: calc(100vw - 25%);
+  margin: 10px;
 }
 
 .card {
@@ -433,29 +449,3 @@ a.btn-show:hover {
 }
 
 
-input[type="text"] {
-  width: 500px;
-  height: 30px;
-}
-
-input[type="email"] {
-  width: 500px;
-  height: 30px;
-}
-
-input[type="password"] {
-  width: 500px;
-  height: 30px;
-}
-
-
-
-textarea {
-  width: 500px;
-  height: 100px;
-}
-
-select {
-  width: 500px;
-  height: 30px;
-}

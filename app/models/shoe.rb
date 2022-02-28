@@ -15,4 +15,12 @@ class Shoe < ApplicationRecord
   belongs_to :manufacturer
   belongs_to :color
   belongs_to :inout
+
+  def self.search(search)
+    if search != ""
+      Shoe.where('title LIKE(?)', "%#{search}%")
+    else
+      Shoe.all
+    end
+  end
 end

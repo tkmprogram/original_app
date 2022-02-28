@@ -23,8 +23,16 @@
     </div>
     <% if user_signed_in? && current_user.id == @shoe.user_id %>
       <div class="shoe-manage">
-        <a href="/" class="btn btn-show"><span>編集</span></a>
-        <a href="/" class="btn btn-show"><span>削除</span></a>
+        <div class="shoe-edit">
+          <%= link_to edit_shoe_path(@shoe.id), class: "btn btn-show" do %>
+            <span>編集</span>
+          <% end %>
+        </div>
+        <div class="delete">
+          <%= link_to shoe_path(@shoe.id), class: "btn btn-show", method: :delete do %>
+            <span>削除</span>
+          <% end %>
+        </div>
       </div>
     <% end %>
   </div>

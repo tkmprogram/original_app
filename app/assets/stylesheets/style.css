@@ -127,7 +127,7 @@ a.btn-flat:before {
   -webkit-transform: rotate(45deg) translateX(0) translateY(0);
   transform: rotate(45deg) translateX(0) translateY(0);
 
-  background: #ac291d;
+  background: #edeaec;
 }
 
 a.btn-flat:after {
@@ -144,7 +144,7 @@ a.btn-flat:after {
   -webkit-transform: rotate(45deg) translateX(0) translateY(0);
   transform: rotate(45deg) translateX(0) translateY(0);
 
-  background: #ac291d;
+  background: #edeaec;
 }
 
 a.btn-flat:hover:before {
@@ -158,15 +158,14 @@ a.btn-flat:hover:after {
 }
 
 a.btn-flat:hover {
-  color: #ffffff;
+  color: #6d4845;
 }
 
 
 
 .nav__right {
-  text-align: right;
   margin: 20px;
-  width: calc(100vw - 70%);
+  width: 800px;
   text-align: center;
 }
 
@@ -174,7 +173,7 @@ a.btn-flat:hover {
   overflow: hidden;
   padding: 1.5rem 6rem;
 
-  color: #fff;
+  color: #6d4845;
   border-radius: 0;
   background: #edeaec;
 }
@@ -228,6 +227,10 @@ a.btn-flat:hover {
   transform: translateX(-50%) translateY(0);
 }
 
+.btn-flat4:hover {
+  color: #edeaec;
+}
+
 /*main*/
 
 .main{
@@ -247,12 +250,20 @@ a.btn-flat:hover {
 }
 
 .card {
-  width: calc((100% - 50px) / 5);
-  margin-bottom: 40px;
+  width: 30%;
+  height: 300px;
+  margin: 7px;
+  border: solid 3px #006f5f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.card__img {
-  margin-bottom: 16px;
+
+.card__image {
+  width: 100%;
+  height: 100%;
 }
+
 .card__title {
   display: block;
   font-size: 30px;
@@ -266,12 +277,14 @@ a.btn-flat:hover {
   color: #999;
   text-align: right;
   text-decoration: underline;
+  font-family: 'Kiwi Maru', serif;
 }
 
 .shoe-wrapper {
   width: calc(100vw - 30%);
   height: calc(100vh - 20%);
   margin: 70px auto;
+  border: double 10px #00426d;
 }
 
 .shoe-hedding {
@@ -290,30 +303,43 @@ a.btn-flat:hover {
   margin: 10px auto;
   border: 2px solid #006f5f;
   padding: 15px;
+  font-family: 'Kiwi Maru', serif;
 }
 
 .shoe-maker {
   text-align: center;
   font-size: 20px;
+  font-family: 'Kiwi Maru', serif;
 }
 
 .shoe-color {
   text-align: center;
   font-size: 20px;
+  font-family: 'Kiwi Maru', serif;
 }
 
 .shoe-inout{
   text-align: center;
   font-size: 20px;
+  font-family: 'Kiwi Maru', serif;
 }
 
 .shoe-user {
   font-size: 25px;
   text-align: center;
+  font-family: 'Kiwi Maru', serif;
 }
 
 .shoe-manage {
   text-align: center;
+}
+
+.shoe-edit {
+  margin: 10px;
+}
+
+.delete {
+  margin: 10px
 }
 
 a.btn-show {

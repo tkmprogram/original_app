@@ -8,6 +8,8 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap" rel="stylesheet">
   </head>
 
   <body>
@@ -21,14 +23,24 @@
 
             <% if user_signed_in? %>
               <div class="nav__right">
-                <%= link_to current_user.nickname, root_path, class: "btn btn-flat4" %>
-                <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn btn-flat4" %>
-                <%= link_to "新規投稿", new_shoe_path, class: "btn btn-flat4" %>
+                <%= link_to root_path, class: "btn btn-flat4" do %>
+                  <span><%= current_user.nickname %></span>
+                <% end %>
+                <%= link_to destroy_user_session_path, method: :delete, class: "btn btn-flat4" do %>
+                  <span>ログアウト</span>
+                <% end %>
+                <%= link_to new_shoe_path, class: "btn btn-flat4" do %>
+                  <span>新規投稿</span>
+                <% end %>
               </div>
             <% else %>
               <div class="nav__right">
-                <%= link_to "ログイン", new_user_session_path, class: "btn btn-flat4" %>
-                <%= link_to "新規登録", new_user_registration_path, class: "btn btn-flat4" %>
+                <%= link_to new_user_session_path, class: "btn btn-flat4" do %>
+                  <span>ログイン</span>
+                <% end %>
+                <%= link_to new_user_registration_path, class: "btn btn-flat4" do %>
+                  <span>新規登録</span>
+                <% end %>
               </div>
             <% end %>
           </div>

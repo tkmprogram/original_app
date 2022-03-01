@@ -1,5 +1,6 @@
 class ShoesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit, :destroy]
+  before_action :create_searching_object,only: [:index, :search]
 
   def index
     @shoes = Shoe.all
@@ -49,12 +50,18 @@ class ShoesController < ApplicationController
   end
 
   def search
+    @keyword = params[:keyword]
     @shoes = Shoe.search(params[:keyword])
+    @results = @q.result
   end
 
   private
 
   def shoe_params
     params.require(:shoe).permit(:image, :title, :explanation, :manufacturer_id, :color_id, :inout_id).merge(user_id: current_user.id)
+  end
+
+  def create_searching_object
+    @q = Shoe.ransack(params[:q]) 
   end
 end

@@ -241,18 +241,41 @@ a.btn-flat:hover {
 }
 
 .search {
-  width: calc(100vw - 75%);
-  margin: 10px;
+  width: calc(100vw - 80%);
   text-align: center;
+  background-color: #aea5a0;
 }
 
 .search-1 {
-  margin: 5px;
+  margin: 30px 15px;
+  border: solid #00426d 2px;
+  padding: 40px 5px;
+}
+
+.keyword-search {
+  color: #4d3614;
+  margin: 0px 0px 10px ;
+}
+
+.search-2 {
+  margin: 30px 15px;
+  border: solid #00426d 2px;
+  padding: 40px 5px;
+}
+
+.keyword-search2 {
+  color: #00426d;
 }
 
 .search-input {
   width: 80%;
   height: 30px;
+}
+
+.form-btn2 {
+  color: #edeaec;
+  background: #00426d;
+  margin: 10px;
 }
 
 .card__wrapper {
@@ -261,7 +284,7 @@ a.btn-flat:hover {
   justify-content: space-between;
   align-items: flex-start;
   min-height: calc(100vh - 161px);
-  width: calc(100vw - 25%);
+  width: calc(100vw - 20%);
   margin: 10px;
 }
 

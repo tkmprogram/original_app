@@ -2,8 +2,25 @@
   <div class="search">
     <div class="search-1">
       <%= form_with(url: search_shoes_path, local: true, method: :get, class: "search-form") do |form| %>
+        <h2 class="keyword-search">キーワード検索</h2>
         <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
-        <%= form.submit "検索", class: "search-btn" %>
+        <div class="action2">
+          <%= form.submit "検索", class: "btn form-btn2" %>
+        </div>
+      <% end %>
+    </div>
+    <div class="search-2">
+      <%= search_form_for @q, url: search_shoes_path do |f| %>
+        <h2 class="keyword-search">絞り込み検索</h2>
+        <h2 class="keyword-search2">メーカー</h2>
+        <%= f.collection_select :manufacturer_id_eq, Manufacturer.all,:id,:name,include_blank: '指定なし' %>
+        <h2 class="keyword-search2">COLOR</h2>
+        <%= f.collection_select :color_id_eq, Color.all,:id,:name,include_blank: '指定なし' %>
+        <h2 class="keyword-search2">XDR</h2>
+        <%= f.collection_select :inout_id_eq, Inout.all,:id,:name,include_blank: '指定なし' %>
+        <div class="action2">
+          <%= f.submit '検索', class: "btn form-btn2" %>
+        </div>
       <% end %>
     </div>
   </div>

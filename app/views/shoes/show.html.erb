@@ -4,7 +4,7 @@
       <%= @shoe.title %>
     </p>
     <div class="shoe-image">
-      <%= image_tag @shoe.image %>
+      <%= image_tag @shoe.image.variant(resize: '500x500') %>
     </div>
     <div class="shoe-explanation">
       <%= @shoe.explanation %>

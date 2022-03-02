@@ -158,7 +158,7 @@ a.btn-flat:hover:after {
 }
 
 a.btn-flat:hover {
-  color: #6d4845;
+  color: #ac291d;
 }
 
 
@@ -240,13 +240,71 @@ a.btn-flat:hover {
   min-width: 100vw;
 }
 
+.search {
+  width: 20%;
+  text-align: center;
+  background-color: #aea5a0;
+}
+
+.search-1 {
+  margin: 30px 15px;
+  border: solid #00426d 2px;
+  padding: 40px 5px;
+}
+
+.keyword-search {
+  font-size: 25px;
+  color: #4d3614;
+  margin: 0px 0px 10px ;
+}
+
+.search-2 {
+  margin: 30px 15px;
+  border: solid #00426d 2px;
+  padding: 40px 5px;
+}
+
+.keyword-search2 {
+  color: #00426d;
+  font-size: 20px;
+}
+
+.search-input {
+  width: 80%;
+  height: 30px;
+  margin: 10px
+}
+
+.form-btn2 {
+  color: #edeaec;
+  background-color: #2d6a92;
+  border-bottom: 5px solid #00426d;
+}
+.form-btn2:hover {
+  margin-top: 3px;
+  color: #edeaec;
+  background: #00426d;
+  border-bottom: 2px solid #00426d
+}
+
+.main2 {
+  width: calc(100vw - 20%);
+}
+
 .card__wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin: 30px;
+  justify-content: space-around;
   min-height: calc(100vh - 161px);
+  margin: 20px;
+  text-align: center;
+}
+
+.page-title {
+  font-size: 50px;
+  color: #ac291d;
+  text-align: center;
+  font-family: 'Kiwi Maru', serif;
 }
 
 .card {
@@ -254,9 +312,11 @@ a.btn-flat:hover {
   height: 300px;
   margin: 7px;
   border: solid 3px #006f5f;
+  padding: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #f8ecd3;
 }
 
 .card__image {
@@ -269,6 +329,7 @@ a.btn-flat:hover {
   font-size: 30px;
   margin-bottom: 8px;
   font-weight: bold;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .card__user {
@@ -285,11 +346,13 @@ a.btn-flat:hover {
   height: calc(100vh - 20%);
   margin: 70px auto;
   border: double 10px #00426d;
+  padding: 20px 10px;
 }
 
 .shoe-hedding {
   text-align: center;
   font-size: 50px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .shoe-image {
@@ -393,11 +456,13 @@ a.btn-show:hover {
 .page-heading {
   font-size: 50px;
   text-align: center;
+  font-family: 'Kiwi Maru', serif;
 }
 
 .login {
   font-size: 50px;
   text-align: center;
+  font-family: 'Kiwi Maru', serif;
 }
 
 .form__wrapper{
@@ -406,8 +471,31 @@ a.btn-show:hover {
   width: 800px;
 }
 
-.shoes-box {
-  text-align: center;
+.form-wrapper {
+  margin: 30px;
+  border: solid #006f5f 5px;
+}
+
+.form-input {
+  width: 80%;
+  height: 50px;
+  margin: 20px;
+}
+
+.title-input {
+  width: 80%;
+  height: 30px;
+}
+
+.text-input {
+  width: 80%;
+  height: 100px;
+}
+
+.new-shoe {
+  margin: 20px;
+  font-size: 30px;
+  color: #6d4845;
 }
 
 .form__text {
@@ -416,7 +504,7 @@ a.btn-show:hover {
 }
 
 .field{
-  margin: 10px 0;
+  margin: 20px;
   width: 800px;
   height: 100px;
   font-size: 30px;
@@ -427,35 +515,22 @@ a.btn-show:hover {
   text-align: center;
 }
 
-.form-btn{
+.form-btn {
   color: #edeaec;
-  background: #ac291d;
+  background-color: #965752;
+  border-bottom: 5px solid #6d4845;
+}
+.form-btn:hover {
+  margin-top: 3px;
+  color: #edeaec;
+  background: #6d4845;
+  border-bottom: 2px solid #6d4845
 }
 
-
-input[type="text"] {
-  width: 500px;
-  height: 30px;
-}
-
-input[type="email"] {
-  width: 500px;
-  height: 30px;
-}
-
-input[type="password"] {
-  width: 500px;
-  height: 30px;
-}
-
-
-
-textarea {
-  width: 500px;
-  height: 100px;
-}
 
 select {
-  width: 500px;
+  width: 80%;
   height: 30px;
+  margin: 10px;
 }
+

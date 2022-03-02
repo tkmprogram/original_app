@@ -1,23 +1,30 @@
 <div class="main">
   <div class="form__wrapper">
     <h2 class="page-heading">NEW shoes</h2>
+    <div class="form-wrapper">
       <%= form_with model: @shoe, url:shoes_path, local: true do |f| %>
         <div class="shoes-box">
+          <h2 class="new-shoe">-ShoesName-</h2>
           <div class="field">
-            <%= f.text_field :title, class:"title", placeholder:"タイトル" %>
+            <%= f.text_field :title, class:"title", placeholder:"タイトル", class: "title-input" %>
           </div>
+          <h2 class="new-shoe">-ShoesExplanation-</h2>
           <div class="field">
-            <%= f.text_area :explanation, class:"explanation", placeholder:"テキスト" %>
+            <%= f.text_area :explanation, class:"explanation", placeholder:"テキスト", class: "text-input" %>
           </div>
+          <h2 class="new-shoe">-ShoesImage-</h2>
           <div class="field">
             <%= f.file_field :image, id:"item-image" %>
           </div>
+          <h2 class="new-shoe">-ShoesMaker-</h2>
           <div class="field">
             <%= f.collection_select(:manufacturer_id, Manufacturer.all, :id, :name, {}, {class:"manufacturer-select"}) %>
           </div>
+          <h2 class="new-shoe">-ShoesColor-</h2>
           <div class="field">
             <%= f.collection_select(:color_id, Color.all, :id, :name, {}, {class:"color-select"}) %>
           </div>
+          <h2 class="new-shoe">-ShoesXDR-</h2>
           <div class="field">
             <%= f.collection_select(:inout_id, Inout.all, :id, :name, {}, {class:"inout-select"}) %>
           </div>
@@ -26,5 +33,6 @@
           </div>
         </div>
       <% end %>
+    </div>
   </div>
 </div>

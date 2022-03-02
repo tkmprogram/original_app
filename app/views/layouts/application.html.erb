@@ -27,19 +27,19 @@
                   <span><%= current_user.nickname %></span>
                 <% end %>
                 <%= link_to destroy_user_session_path, method: :delete, class: "btn btn-flat4" do %>
-                  <span>ログアウト</span>
+                  <span>log out</span>
                 <% end %>
                 <%= link_to new_shoe_path, class: "btn btn-flat4" do %>
-                  <span>新規投稿</span>
+                  <span>new shoes</span>
                 <% end %>
               </div>
             <% else %>
               <div class="nav__right">
                 <%= link_to new_user_session_path, class: "btn btn-flat4" do %>
-                  <span>ログイン</span>
+                  <span>log in</span>
                 <% end %>
                 <%= link_to new_user_registration_path, class: "btn btn-flat4" do %>
-                  <span>新規登録</span>
+                  <span>sign up</span>
                 <% end %>
               </div>
             <% end %>

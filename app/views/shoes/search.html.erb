@@ -2,65 +2,68 @@
   <div class="search">
     <div class="search-1">
       <%= form_with(url: search_shoes_path, local: true, method: :get, class: "search-form") do |form| %>
-        <h2>キーワード検索</h2>
+        <h2 class="keyword-search">キーワード検索</h2>
         <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
-        <div>
-          <%= form.submit "検索", class: "search-btn" %>
+        <div class="action2">
+          <%= form.submit "検索", class: "btn form-btn2" %>
         </div>
       <% end %>
     </div>
     <div class="search-2">
       <%= search_form_for @q, url: search_shoes_path do |f| %>
-        <p>メーカー</p>
+        <h2 class="keyword-search">絞り込み検索</h2>
+        <h2 class="keyword-search2">メーカー</h2>
         <%= f.collection_select :manufacturer_id_eq, Manufacturer.all,:id,:name,include_blank: '指定なし' %>
-        <p>COLOR</p>
+        <h2 class="keyword-search2">COLOR</h2>
         <%= f.collection_select :color_id_eq, Color.all,:id,:name,include_blank: '指定なし' %>
-        <p>XDR</p>
+        <h2 class="keyword-search2">XDR</h2>
         <%= f.collection_select :inout_id_eq, Inout.all,:id,:name,include_blank: '指定なし' %>
-        <div>
-          <%= f.submit '検索' %>
+        <div class="action2">
+          <%= f.submit '検索', class: "btn form-btn2" %>
         </div>
       <% end %>
     </div>
   </div>
-
-  <div class="card__wrapper">
-    <% if @keyword.present? %>
-      <% @shoes.each do |shoe| %>
-        <div class="card">
-          <div class="card-wrapper">
-            <div class="card__image">
-              <%= link_to image_tag(shoe.image.variant(resize: '300x300')), shoe_path(shoe.id) %>
+  <div class="main2">
+    <h3 class="page-title">ーShoesBoxー</h3>
+    <div class="card__wrapper">
+      <% if @keyword.present? %>
+        <% @shoes.each do |shoe| %>
+          <div class="card">
+            <div class="card-wrapper">
+              <div class="card__image">
+                <%= link_to image_tag(shoe.image.variant(resize: '300x300')), shoe_path(shoe.id) %>
+              </div>
+            </div>
+            <div class="card__body">
+              <div class="card__title">
+                <%= link_to shoe.title, shoe_path(shoe.id) %>
+              </div>
+              <div class="card__user">
+                <%= link_to "by #{shoe.user.nickname}", root_path %>
+              </div>
             </div>
           </div>
-          <div class="card__body">
-            <div class="card__title">
-              <%= link_to shoe.title, shoe_path(shoe.id) %>
+        <% end %>
+      <% else %>
+        <% @results.each do |shoe| %>
+          <div class="card">
+            <div class="card-wrapper">
+              <div class="card__image">
+                <%= link_to image_tag(shoe.image.variant(resize: '300x300')), shoe_path(shoe.id) %>
+              </div>
             </div>
-            <div class="card__user">
-              <%= link_to "by #{shoe.user.nickname}", root_path %>
+            <div class="card__body">
+              <div class="card__title">
+                <%= link_to shoe.title, shoe_path(shoe.id) %>
+              </div>
+              <div class="card__user">
+                <%= link_to "by #{shoe.user.nickname}", root_path %>
+              </div>
             </div>
           </div>
-        </div>
+        <% end %>
       <% end %>
-    <% else %>
-      <% @results.each do |shoe| %>
-        <div class="card">
-          <div class="card-wrapper">
-            <div class="card__image">
-              <%= link_to image_tag(shoe.image.variant(resize: '300x300')), shoe_path(shoe.id) %>
-            </div>
-          </div>
-          <div class="card__body">
-            <div class="card__title">
-              <%= link_to shoe.title, shoe_path(shoe.id) %>
-            </div>
-            <div class="card__user">
-              <%= link_to "by #{shoe.user.nickname}", root_path %>
-            </div>
-          </div>
-        </div>
-      <% end %>
-    <% end %>
+    </div>
   </div>
 </main>

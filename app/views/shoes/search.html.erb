@@ -40,7 +40,7 @@
                 <%= link_to shoe.title, shoe_path(shoe.id) %>
               </div>
               <div class="card__user">
-                <%= link_to "by #{shoe.user.nickname}", root_path %>
+                <%= link_to "by #{shoe.user.nickname}", user_path(shoe.user.id) %>
               </div>
             </div>
           </div>
@@ -58,7 +58,7 @@
                 <%= link_to shoe.title, shoe_path(shoe.id) %>
               </div>
               <div class="card__user">
-                <%= link_to "by #{shoe.user.nickname}", root_path %>
+                <%= link_to "by #{shoe.user.nickname}", user_path(shoe.user.id) %>
               </div>
             </div>
           </div>

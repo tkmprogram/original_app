@@ -291,6 +291,10 @@ a.btn-flat:hover {
   width: calc(100vw - 20%);
 }
 
+.user-show {
+  width: 100%;
+}
+
 .card__wrapper {
   display: flex;
   flex-wrap: wrap;

@@ -250,6 +250,7 @@ a.btn-flat:hover {
   margin: 30px 15px;
   border: solid #00426d 2px;
   padding: 40px 5px;
+  background-color: #c9c9c9;
 }
 
 .keyword-search {
@@ -262,6 +263,7 @@ a.btn-flat:hover {
   margin: 30px 15px;
   border: solid #00426d 2px;
   padding: 40px 5px;
+  background-color: #c9c9c9;
 }
 
 .keyword-search2 {
@@ -286,6 +288,26 @@ a.btn-flat:hover {
   background: #00426d;
   border-bottom: 2px solid #00426d
 }
+
+.search-3 {
+  margin: 30px 15px;
+  border: solid #00426d 2px;
+  padding: 40px 5px;
+  background-color: #c9c9c9;
+}
+
+a.form-btn3 {
+  color: #edeaec;
+  background-color: #2d6a92;
+  border-bottom: 5px solid #00426d;
+}
+a.form-btn3:hover {
+  margin-top: 3px;
+  color: #edeaec;
+  background: #00426d;
+  border-bottom: 2px solid #00426d;
+}
+
 
 .main2 {
   width: calc(100vw - 20%);

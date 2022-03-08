@@ -61,3 +61,5 @@ gem 'image_processing'
 gem 'active_hash'
 
 gem 'ransack'
+
+gem 'rspec-rails', '~> 4.0.0'

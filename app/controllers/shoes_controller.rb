@@ -3,7 +3,7 @@ class ShoesController < ApplicationController
   before_action :create_searching_object,only: [:index, :search]
 
   def index
-    @shoes = Shoe.all
+    @shoes = Shoe.page(params[:page]).per(9)
   end
 
   def new

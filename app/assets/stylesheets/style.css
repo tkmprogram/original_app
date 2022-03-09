@@ -376,6 +376,13 @@ a.form-btn3:hover {
   font-family: 'Kiwi Maru', serif;
 }
 
+.kaminari {
+  text-align: center;
+  font-size: 20px;
+  background-color: #f8ecd3;
+  font-family: 'Kiwi Maru', serif;
+}
+
 .shoe-wrapper {
   width: calc(100vw - 30%);
   height: calc(100vh - 20%);

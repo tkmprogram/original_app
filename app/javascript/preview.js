@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function(){
   const previewList = document.getElementById('previews');
   if (!postForm) return null;
 
+  const imageLimits = 4;
+
   const buildPreviewImage = (dataIndex, blob) =>{
     const previewWrapper = document.createElement('div');
     previewWrapper.setAttribute('class', 'preview');
@@ -43,6 +45,9 @@ document.addEventListener('DOMContentLoaded', function(){
     deletePreviewImage.remove();
     const deleteFileField = document.querySelector(`input[type="file"][data-index="${dataIndex}"]`);
     deleteFileField.remove();
+
+    const imageCount = document.querySelectorAll(".preview").length;
+    if (imageCount == imageLimits - 1) buildNewFileField();
   };
 
   const changedFileField = (e) => {
@@ -67,7 +72,9 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
     buildPreviewImage(dataIndex, blob);
-    buildNewFileField();
+
+    const imageCount = document.querySelectorAll(".preview").length;
+    if (imageCount < imageLimits) buildNewFileField();
   };
 
   const fileField = document.querySelector('input[type="file"][name="post[images][]"]');

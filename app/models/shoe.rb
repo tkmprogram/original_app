@@ -5,7 +5,7 @@ class Shoe < ApplicationRecord
   validates :title, presence: true
   validates :explanation, presence: true
   validates :user, presence: true
-  validates :images, presence: true
+  validates :images, presence: true, length: { minimum: 1, maximum: 4, message: "は1枚以上4枚以下にしてください" }
 
   belongs_to :user
 

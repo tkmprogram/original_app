@@ -12,7 +12,14 @@ document.addEventListener('DOMContentLoaded', function(){
     previewImage.setAttribute('class', 'preview-image');
     previewImage.setAttribute('src', blob);
 
+    const deleteButton = document.createElement("div");
+    deleteButton.setAttribute("class", "image-delete-button");
+    deleteButton.innerText = "削除";
+
+    deleteButton.addEventListener("click", () => deleteImage(dataIndex));
+
     previewWrapper.appendChild(previewImage);
+    previewWrapper.appendChild(deleteButton);
     previewList.appendChild(previewWrapper);
   };
 
@@ -31,11 +38,33 @@ document.addEventListener('DOMContentLoaded', function(){
     fileFieldsArea.appendChild(newFileField);
   };
 
+  const deleteImage = (dataIndex) => {
+    const deletePreviewImage = document.querySelector(`.preview[data-index="${dataIndex}"]`);
+    deletePreviewImage.remove();
+    const deleteFileField = document.querySelector(`input[type="file"][data-index="${dataIndex}"]`);
+    deleteFileField.remove();
+  };
+
   const changedFileField = (e) => {
     const dataIndex = e.target.getAttribute('data-index');
 
     const file = e.target.files[0];
+
+    if (!file) {
+      deleteImage(dataIndex);
+      return null;
+    };
+
     const blob = window.URL.createObjectURL(file);
+
+    const alreadyPreview = document.querySelector(`.preview[data-index="${dataIndex}"]`);
+
+    if (alreadyPreview) {
+      const alreadyPreviewImage = alreadyPreview.querySelector("img");
+      alreadyPreviewImage.setAttribute("src", blob);
+      return null;
+    };
+
 
     buildPreviewImage(dataIndex, blob);
     buildNewFileField();

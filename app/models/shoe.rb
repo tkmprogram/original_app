@@ -5,11 +5,11 @@ class Shoe < ApplicationRecord
   validates :title, presence: true
   validates :explanation, presence: true
   validates :user, presence: true
-  validates :image, presence: true
+  validates :images, presence: true
 
   belongs_to :user
 
-  has_one_attached :image
+  has_many_attached :images
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :manufacturer

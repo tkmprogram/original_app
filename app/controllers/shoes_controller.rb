@@ -58,7 +58,7 @@ class ShoesController < ApplicationController
   private
 
   def shoe_params
-    params.require(:shoe).permit(:image, :title, :explanation, :manufacturer_id, :color_id, :inout_id).merge(user_id: current_user.id)
+    params.require(:shoe).permit(:title, :explanation, :manufacturer_id, :color_id, :inout_id, {images: []}).merge(user_id: current_user.id)
   end
 
   def create_searching_object

@@ -4,9 +4,9 @@
       <%= @shoe.title %>
     </p>
     <div class="shoe-image">
-      <%= image_tag @post.images[0], class: "main-image" %><br>
+      <%= image_tag @shoe.images[0], class: "main-image" %><br>
   <div class="other-images">
-    <% @post.images[1..-1].each do |image| %>
+    <% @shoe.images[1..-1].each do |image| %>
       <div class="other-image">
         <%= image_tag image %>
       </div>
